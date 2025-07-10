@@ -114,6 +114,8 @@ vim.opt.showmode = false
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
+--
+--  Really Fucking Cool!!
 vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'
 end)
@@ -850,6 +852,15 @@ require('lazy').setup({
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
+    end,
+  },
+
+  -- lua/plugins/rose-pine.lua
+  {
+    'rose-pine/neovim',
+    name = 'rose-pine',
+    config = function()
+      vim.cmd 'colorscheme rose-pine'
     end,
   },
 
